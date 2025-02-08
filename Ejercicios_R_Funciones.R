@@ -50,12 +50,13 @@ numeros_pares(10)
 #n x n donde los elementos son el resultado de la suma de sus indices de fila y columna
 
 matriz_cuadrada <- function(n) {
-  for (i in 1:n) {
-    for (j in 1:n) {
-      cat(i + j, "\t")
+  matriz <- matrix(0, nrow = n, ncol = n)
+    for (i in 1:n) {
+      for (j in 1:n) { 
+        matriz[i, j] <- i + j
     }
-    cat("\n")
-  }
+    }
+  print(matriz)
 }
 
 matriz_cuadrada(4)
